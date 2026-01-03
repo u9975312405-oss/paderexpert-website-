@@ -3,131 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PADEREXPERT - Kfz-Gutachter Paderborn</title>
-<meta name="description" content="PADEREXPERT - Ihr Kfz-Gutachter in Paderborn. Professionelle Schadensgutachten und Fahrzeugbewertungen.">
-<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAA..." />
+<title>Kfz Gutachter Paderborn – Unfall- & Schadensgutachten</title>
+<meta name="description" content="Kompetenter Kfz-Sachverständiger in Paderborn. Unfallgutachten, Schadensgutachten & Fahrzeugbewertungen schnell und rechtssicher. Kontaktieren Sie uns direkt via WhatsApp.">
+<meta name="keywords" content="Kfz Gutachter Paderborn, Kfz Sachverständiger Paderborn, Unfallgutachten Paderborn, Schadensgutachten, Fahrzeugbewertung, Oldtimer Gutachten, Auto Wertgutachten, Versicherungsgutachten">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-/* RESET */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; line-height:1.6; background:#f9f9f9; color:#222; }
-:root { --main-color:#003366; --accent-color:#ff6600; }
+/* Grundlayout */
+body {margin:0; font-family:'Roboto',sans-serif; background-color:#F5F5F5; color:#333; scroll-behavior:smooth;}
+a {text-decoration:none;}
+h1,h2,h3 {margin:0;}
+section {padding:60px 20px; max-width:1200px; margin:auto;}
+h2 {color:#004C97; margin-bottom:25px; text-align:center; font-size:2em;}
 
-/* HEADER */
-header { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:var(--main-color); color:#fff; position:relative; z-index:10; }
-header img { height:50px; }
-nav a { color:#fff; text-decoration:none; margin-left:1.5rem; font-weight:bold; }
-nav a:hover { text-decoration:underline; }
+/* Hero */
+header {position:relative; height:80vh; display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; overflow:hidden;}
+header video {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; opacity:0.25;}
+header .overlay {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,76,151,0.5); z-index:1;}
+header .content {position:relative; z-index:2;}
+header h1 {font-size:3em; margin-bottom:10px;}
+header p {font-size:1.2em; margin-bottom:25px;}
+header .cta a {background:#FF6F00; color:white; padding:18px 35px; border-radius:50px; font-weight:bold; font-size:1em; transition:0.3s;}
+header .cta a:hover {background:#e65a00;}
 
-/* HERO */
-.hero { position:relative; height:80vh; display:flex; justify-content:center; align-items:center; text-align:center; color:#fff; overflow:hidden; }
-.hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); z-index:1; }
-.hero-content { position:relative; z-index:2; max-width:600px; }
-.hero-content h1 { font-size:3rem; margin-bottom:1rem; }
-.hero-content p { font-size:1.2rem; margin-bottom:2rem; }
-.btn { padding:0.8rem 1.5rem; background:var(--accent-color); color:#fff; text-decoration:none; font-weight:bold; border-radius:5px; transition:0.3s; }
-.btn:hover { background:#e65c00; }
+/* Services */
+.services {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.service {background:white; flex:1; min-width:250px; padding:35px 25px; border-radius:15px; box-shadow:0 6px 20px rgba(0,0,0,0.1); text-align:center; transition:0.3s; position:relative;}
+.service i {font-size:3em; margin-bottom:15px; display:block;}
+.service:hover {transform:translateY(-7px); box-shadow:0 12px 25px rgba(0,0,0,0.15);}
+.service h3 {color:#004C97; margin-bottom:15px; font-size:1.4em;}
 
-/* SECTIONS */
-section { padding:4rem 2rem; max-width:1200px; margin:auto; }
-h2 { font-size:2rem; margin-bottom:2rem; color:var(--main-color); text-align:center; }
-.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; }
-.service-card { background:#fff; padding:2rem; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); text-align:center; transition:0.3s; }
-.service-card:hover { transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+/* Farbige Icons */
+.service i.fa-car-crash {color:#FF6F00;}
+.service i.fa-tools {color:#FF6F00;}
+.service i.fa-car {color:#FF6F00;}
+.service i.fa-comments {color:#FF6F00;}
 
-/* CONTACT CARD */
-.contact-card { background:#fff; padding:2rem; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); max-width:400px; margin:auto; text-align:center; }
+/* Info / Wissenswertes */
+.info {background:#F0F4F8; padding:60px 20px; border-radius:15px; text-align:center;}
 
-/* FOOTER */
-footer { background:var(--main-color); color:#fff; text-align:center; padding:2rem; }
-footer a { color:var(--accent-color); text-decoration:none; }
-footer a:hover { text-decoration:underline; }
+/* Testimonials */
+.testimonials {background:#004C97; color:white; padding:60px 20px; text-align:center;}
+.testimonials p {font-style:italic; max-width:800px; margin:20px auto; font-size:1.1em;}
 
-/* RESPONSIVE */
-@media(max-width:768px){ .hero-content h1{font-size:2rem;} .hero-content p{font-size:1rem;} }
-</style>
+/* Kontakt */
+.contact {text-align:center;}
+.contact a.cta {background:#FF6F00; color:white; padding:15px 30px; border-radius:50px; font-weight:bold; display:inline-block; margin-top:20px; transition:0.3s;}
+.contact a.cta:hover {background:#e65a00;}
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "PADEREXPERT",
-  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAA...",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Therese-Pöhler-Weg 2",
-    "addressLocality": "Paderborn",
-    "postalCode": "33100",
-    "addressCountry": "DE"
-  },
-  "telephone": "+4915560037774",
-  "email": "info@gutachter-paderexpert.de",
-  "url": "https://www.gutachter-paderexpert.de",
-  "sameAs": []
+/* Footer */
+footer {background:#333; color:white; text-align:center; padding:50px 20px;}
+footer a {color:#FF6F00; margin:0 10px;}
+
+/* WhatsApp */
+.whatsapp {position:fixed; bottom:20px; right:20px; background:#FF6F00; color:white; padding:15px 22px; border-radius:50px; font-weight:bold; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); transition:0.3s; z-index:100;}
+.whatsapp:hover {background:#e65a00; transform:scale(1.1);}
+
+/* Cookie Banner */
+#cookie-banner {position:fixed; bottom:0; left:0; width:100%; background:white; color:#333; padding:15px 20px; box-shadow:0 -2px 12px rgba(0,0,0,0.2); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; z-index:9999;}
+#cookie-banner p {margin:0; font-size:0.95em;}
+#cookie-banner button {background:#FF6F00; color:white; border:none; padding:10px 20px; border-radius:50px; cursor:pointer; font-weight:bold; transition:0.3s;}
+#cookie-banner button:hover {background:#e65a00;}
+
+/* Scroll Animation */
+[data-animate]{opacity:0; transform:translateY(20px); transition:all 0.8s ease-out;}
+[data-animate].visible{opacity:1; transform:translateY(0);}
+
+/* Responsive */
+@media(max-width:768px) {
+    .services {flex-direction:column; align-items:center;}
+    header h1 {font-size:2.2em;}
+    header p {font-size:1em;}
 }
-</script>
+</style>
 </head>
-
 <body>
+
+<!-- Hero -->
 <header>
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAA..." alt="PADEREXPERT Logo">
-  <nav>
-    <a href="#services">Leistungen</a>
-    <a href="#about">Über uns</a>
-    <a href="#contact">Kontakt</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-  </nav>
+    <video autoplay muted loop>
+        <source src="https://cdn.pixabay.com/vimeo/555024755/road-driving-4k.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Kfz-Sachverständiger Paderborn</h1>
+        <p>Schnell, zuverlässig und rechtssicher – wir begutachten Ihr Fahrzeug professionell.</p>
+        <div class="cta">
+            <a href="https://wa.me/49155560037774" target="_blank">💬 Jetzt per WhatsApp kontaktieren</a>
+        </div>
+    </div>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>PADEREXPERT – Ihr Kfz-Gutachter in Paderborn</h1>
-    <p>Professionelle Schadensgutachten, Unfallbewertungen und Fahrzeugbewertungen aus einer Hand.</p>
-    <a href="#contact" class="btn">Jetzt kontaktieren</a>
-  </div>
-  <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAIAAADTED8xAAA..." 
-       alt="Kfz-Gutachter Hero" 
-       style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0;">
+<!-- Über uns -->
+<section data-animate>
+    <h2>Über uns</h2>
+    <p>Mit langjähriger Erfahrung in der Automobilbranche – Werkstatt, Handel und Fahrzeugbewertung – bieten wir Ihnen professionelle Kfz-Gutachten. Wir dokumentieren Schäden präzise und erklären alle Schritte verständlich.</p>
 </section>
 
-<section id="services">
-  <h2>Unsere Leistungen</h2>
-  <div class="services">
-    <div class="service-card">
-      <h3>Unfallgutachten</h3>
-      <p>Präzise Bewertung von Fahrzeugschäden nach Unfällen, anerkannt bei Versicherungen.</p>
+<!-- Dienstleistungen -->
+<section data-animate>
+    <h2>Unsere Dienstleistungen</h2>
+    <div class="services">
+        <div class="service">
+            <i class="fas fa-car-crash"></i>
+            <h3>Unfallgutachten</h3>
+            <p>Präzise Gutachten nach Autounfällen, anerkannt von Versicherungen. Schnell, transparent und nachvollziehbar.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-tools"></i>
+            <h3>Schadensgutachten</h3>
+            <p>Dokumentation von Fahrzeugschäden für Versicherung oder Privatpersonen – verständlich und rechtssicher.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-car"></i>
+            <h3>Fahrzeugbewertung / Wertgutachten</h3>
+            <p>Gebrauchtwagen, Oldtimer oder Neuwagen – wir bewerten Ihr Auto neutral und fair.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-comments"></i>
+            <h3>Beratung & Zweitmeinung</h3>
+            <p>Unsicher beim Kauf oder Verkauf? Wir bieten unabhängige Beratung und Zweitmeinungen.</p>
+        </div>
     </div>
-    <div class="service-card">
-      <h3>Fahrzeugbewertung</h3>
-      <p>Transparente Bewertung von Gebrauchtfahrzeugen für Kauf, Verkauf oder Versicherung.</p>
-    </div>
-    <div class="service-card">
-      <h3>Schadensgutachten</h3>
-      <p>Professionelle Begutachtung von Kfz-Schäden zur rechtssicheren Dokumentation.</p>
-    </div>
-  </div>
 </section>
 
-<section id="about">
-  <h2>Über PADEREXPERT</h2>
-  <p style="max-width:700px; margin:auto; text-align:center;">
-    PADEREXPERT ist Ihr zuverlässiger Kfz-Gutachter in Paderborn. Mit jahrelanger Erfahrung unterstützen wir Sie bei Schadensfällen, Unfallbewertungen und Fahrzeugbewertungen – schnell, transparent und professionell.
-  </p>
+<!-- Wissenswertes -->
+<section class="info" data-animate>
+    <h2>Wissenswertes für Kunden</h2>
+    <p>Erfahren Sie alles über den Ablauf eines Gutachtens, Tipps nach einem Unfall und Versicherungsschritte. Nutzen Sie auch unsere FAQ und Blogartikel für nützliche Informationen rund ums Auto.</p>
 </section>
 
-<section id="contact">
-  <h2>Kontakt</h2>
-  <div class="contact-card">
-    <p><strong>Telefon:</strong> <a href="tel:+4915560037774">01556 0037774</a></p>
-    <p><strong>Email:</strong> <a href="mailto:info@gutachter-paderexpert.de">info@gutachter-paderexpert.de</a></p>
-    <p><strong>Adresse:</strong> Therese-Pöhler-Weg 2, 33100 Paderborn</p>
-  </div>
+<!-- Testimonials -->
+<section class="testimonials" data-animate>
+    <h2>Kundenstimmen</h2>
+    <p>„Sehr schnelle und klare Abwicklung – absolut empfehlenswert!“ – Max M., Paderborn</p>
+    <p>„Kompetent und freundlich, ich fühle mich bestens beraten.“ – Anna S., Paderborn</p>
 </section>
 
+<!-- Kontakt -->
+<section class="contact" data-animate>
+    <h2>Kontakt / Termin</h2>
+    <p>Adresse: Therese-Pöhler-Weg 2, 33100 Paderborn</p>
+    <p>Telefon: 0155 60037774</p>
+    <p>Öffnungszeiten: Mo–Fr 08:00–18:00</p>
+    <a href="https://wa.me/49155560037774" target="_blank" class="cta">💬 Direkt per WhatsApp kontaktieren</a>
+</section>
+
+<!-- Footer -->
 <footer>
-  &copy; 2026 PADEREXPERT | <a href="#contact">Kontakt</a> | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+    <p>&copy; 2026 Kfz-Sachverständiger Paderborn | <a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">AGB</a></p>
 </footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/49155560037774" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner">
+    <p>Wir verwenden Cookies, um Inhalte zu personalisieren und die Website zu verbessern. Mit der Nutzung stimmen Sie unserer <a href="#">Datenschutzerklärung</a> zu.</p>
+    <button id="cookie-accept">Akzeptieren</button>
+</div>
+
+<script>
+// Cookie-Banner
+document.getElementById('cookie-accept').addEventListener('click', function(){
+    document.getElementById('cookie-banner').style.display='none';
+    localStorage.setItem('cookiesAccepted','true');
+});
+window.onload = function(){
+    if(localStorage.getItem('cookiesAccepted')==='true'){
+        document.getElementById('cookie-banner').style.display='none';
+    }
+};
+
+// Scroll Animation
+const animateElements = document.querySelectorAll('[data-animate]');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+},{threshold:0.2});
+animateElements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
