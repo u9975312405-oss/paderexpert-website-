@@ -1,92 +1,44 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PADEREXPERT – Kfz-Gutachter in Paderborn</title>
-  <meta name="description" content="PADEREXPERT – Ihr Kfz-Gutachter in Paderborn. Professionelle Schadensgutachten, Unfallbewertungen und Fahrzeugbewertungen.">
-  <meta name="keywords" content="Kfz-Gutachter, Paderborn, Unfallgutachten, Fahrzeugbewertung, Schadensgutachten">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "PADEREXPERT",
-    "image": "https://yourdomain.com/logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Therese-Pöhler-Weg 2",
-      "addressLocality": "Paderborn",
-      "postalCode": "33100",
-      "addressCountry": "DE"
-    },
-    "telephone": "+4915560037774",
-    "email": "info@gutachter-paderexpert.de",
-    "url": "https://yourdomain.com",
-    "sameAs": []
-  }
-  </script>
-</head>
-<body>
+/* GLOBAL RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-family: Arial, sans-serif; }
+body { line-height: 1.6; color: #222; background: #f9f9f9; }
 
-<header>
-  <img src="logo.png" alt="PADEREXPERT Logo">
-  <nav>
-    <a href="#services">Leistungen</a>
-    <a href="#about">Über uns</a>
-    <a href="#contact">Kontakt</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-  </nav>
-</header>
+/* COLORS */
+:root {
+  --main-color: #003366;
+  --accent-color: #ff6600;
+}
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>PADEREXPERT – Ihr Kfz-Gutachter in Paderborn</h1>
-    <p>Professionelle Schadensgutachten, Unfallbewertungen und Fahrzeugbewertungen aus einer Hand.</p>
-    <a href="#contact" class="btn">Jetzt kontaktieren</a>
-  </div>
-</section>
+/* HEADER */
+header { background: var(--main-color); color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+header img { height: 50px; }
+nav a { color: #fff; text-decoration: none; margin-left: 1.5rem; font-weight: bold; }
+nav a:hover { text-decoration: underline; }
 
-<section id="services">
-  <h2>Unsere Leistungen</h2>
-  <div class="services">
-    <div class="service-card">
-      <h3>Unfallgutachten</h3>
-      <p>Präzise Bewertung von Fahrzeugschäden nach Unfällen, anerkannt bei Versicherungen.</p>
-    </div>
-    <div class="service-card">
-      <h3>Fahrzeugbewertung</h3>
-      <p>Transparente Bewertung von Gebrauchtfahrzeugen für Kauf, Verkauf oder Versicherung.</p>
-    </div>
-    <div class="service-card">
-      <h3>Schadensgutachten</h3>
-      <p>Professionelle Begutachtung von Kfz-Schäden zur rechtssicheren Dokumentation.</p>
-    </div>
-  </div>
-</section>
+/* HERO */
+.hero { position: relative; background: url('hero.jpg') center/cover no-repeat; height: 80vh; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; }
+.hero::after { content: ""; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); }
+.hero-content { position: relative; z-index: 2; max-width: 600px; }
+.hero-content h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero-content p { font-size: 1.2rem; margin-bottom: 2rem; }
 
-<section id="about">
-  <h2>Über PADEREXPERT</h2>
-  <p style="max-width:700px; margin:auto; text-align:center;">
-    PADEREXPERT ist Ihr zuverlässiger Kfz-Gutachter in Paderborn. Mit jahrelanger Erfahrung und Fachkompetenz unterstützen wir Sie bei Schadensfällen, Unfallbewertungen und Fahrzeugbewertungen – schnell, transparent und professionell.
-  </p>
-</section>
+.btn { display: inline-block; padding: 0.8rem 1.5rem; background: var(--accent-color); color: #fff; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+.btn:hover { background: #e65c00; }
 
-<section id="contact">
-  <h2>Kontakt</h2>
-  <p style="text-align:center; margin-bottom:2rem;">Rufen Sie uns an oder schreiben Sie uns eine Nachricht:</p>
-  <div class="contact-card">
-    <p><strong>Telefon:</strong> <a href="tel:+4915560037774">01556 0037774</a></p>
-    <p><strong>Email:</strong> <a href="mailto:info@gutachter-paderexpert.de">info@gutachter-paderexpert.de</a></p>
-    <p><strong>Adresse:</strong> Therese-Pöhler-Weg 2, 33100 Paderborn</p>
-  </div>
-</section>
+/* SECTIONS */
+section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
+h2 { font-size: 2rem; margin-bottom: 2rem; color: var(--main-color); text-align: center; }
+.services { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 2rem; }
+.service-card { background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; transition: 0.3s; }
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 
-<footer>
-  &copy; 2026 PADEREXPERT | <a href="#contact">Kontakt</a> | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
-</footer>
+/* CONTACT CARD */
+.contact-card { background:#fff; padding:2rem; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); max-width:400px; margin:auto; text-align:center; }
 
-</body>
-</html>
+/* FOOTER */
+footer { background: var(--main-color); color: #fff; text-align: center; padding: 2rem; }
+footer a { color: var(--accent-color); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* RESPONSIVE */
+@media(max-width:768px){ .hero-content h1{font-size:2rem;} .hero-content p{font-size:1rem;} }
