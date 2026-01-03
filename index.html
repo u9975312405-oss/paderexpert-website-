@@ -1,58 +1,153 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PADEREXPERT – Kfz-Gutachter Paderborn</title>
-<meta name="description" content="PADEREXPERT – Ihr Kfz-Gutachter in Paderborn für Unfall-, Wert- & Schadensgutachten.">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>Kfz-Gutachter Paderborn | PADEREXPERT</title>
+
+  <meta name="description" content="PADEREXPERT – Ihr unabhängiger Kfz-Gutachter in Paderborn. Unfallgutachten, Wertgutachten & Schadengutachten. 24h erreichbar." />
+  <meta name="keywords" content="Kfz Gutachter Paderborn, Unfallgutachten, Wertgutachten, Schadengutachten, PADEREXPERT" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c5?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f97316;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #111;
+      padding: 10px 20px;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #f97316;
+      margin-bottom: 20px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #eee;
+      padding: 20px;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #f97316;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <div class="logo"><img src="images/logo.png" alt="PADEREXPERT Logo"></div>
+
   <nav>
-    <ul>
-      <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#ueber-uns">Über uns</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#ueber">Über uns</a>
+    <a href="#kontakt">Kontakt</a>
   </nav>
-</header>
-<section id="hero">
-  <div class="hero-text">
-    <h1>Ihr Kfz-Gutachter in Paderborn</h1>
-    <p>Professionelle Gutachten für Unfall, Wertgutachten & mehr.</p>
-    <a href="#kontakt" class="btn">Jetzt Termin vereinbaren</a>
-  </div>
-  <img src="images/hero-car.jpg" alt="Gutachter prüft Auto">
-</section>
-<section id="leistungen">
-  <h2>Unsere Leistungen</h2>
-  <div class="leistungen-grid">
-    <div class="leistung-item"><h3>Unfallgutachten</h3><p>Professionelle Begutachtung nach Unfällen aller Art.</p></div>
-    <div class="leistung-item"><h3>Wertgutachten</h3><p>Fahrzeugwert professionell ermitteln lassen.</p></div>
-    <div class="leistung-item"><h3>Schadensgutachten</h3><p>Schäden präzise dokumentiert für Versicherung & Recht.</p></div>
-  </div>
-</section>
-<section id="ueber-uns">
-  <h2>Über PADEREXPERT</h2>
-  <p>Seit Jahren Ihr zuverlässiger Kfz-Sachverständiger in Paderborn. Persönlich, schnell und kompetent.</p>
-</section>
-<section id="kontakt">
-  <h2>Kontakt</h2>
-  <p>Telefon: <a href="tel:+4915560037774">015560037774</a></p>
-  <p>Email: <a href="mailto:info@gutachter-paderexpert.de">info@gutachter-paderexpert.de</a></p>
-  <form action="#" method="post">
-    <input type="text" name="name" placeholder="Ihr Name" required>
-    <input type="email" name="email" placeholder="Ihre Email" required>
-    <textarea name="nachricht" placeholder="Ihre Nachricht" required></textarea>
-    <button type="submit">Nachricht senden</button>
-  </form>
-</section>
-<footer>
-  <p>&copy; 2026 PADEREXPERT – Kfz-Gutachter in Paderborn</p>
-  <p>Adresse: Therese-Pöhler-Weg 2, 33100 Paderborn</p>
-</footer>
-<script src="js/script.js"></script>
+
+  <header>
+    <h1>Kfz-Gutachter in Paderborn</h1>
+    <p>Unfallgutachten · Wertgutachten · Schadengutachten</p>
+    <a class="btn" href="tel:+49155560037774">📞 Jetzt anrufen</a>
+  </header>
+
+  <section id="leistungen">
+    <h2>Unsere Leistungen</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Unfallgutachten</h3>
+        <p>Professionelle Begutachtung nach Verkehrsunfällen aller Art.</p>
+      </div>
+      <div class="card">
+        <h3>Wertgutachten</h3>
+        <p>Marktgerechte Fahrzeugbewertungen – auch für Oldtimer.</p>
+      </div>
+      <div class="card">
+        <h3>Schadengutachten</h3>
+        <p>Präzise Dokumentation für Versicherung & Recht.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber">
+    <h2>Über PADEREXPERT</h2>
+    <p>
+      PADEREXPERT ist Ihr unabhängiger Kfz-Gutachter in Paderborn und Umgebung.
+      Wir stehen für schnelle Termine, transparente Gutachten und persönliche Beratung.
+    </p>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p><strong>Adresse:</strong> Therese-Pöhler-Weg 2, 33100 Paderborn</p>
+    <p><strong>Telefon:</strong> <a href="tel:+49155560037774">+49 1555 60037774</a></p>
+    <p><strong>Erreichbarkeit:</strong> Rund um die Uhr</p>
+  </section>
+
+  <footer>
+    © 2026 PADEREXPERT – Kfz-Gutachter Paderborn ·
+    <a href="#">Impressum</a> · <a href="#">Datenschutz</a>
+  </footer>
+
 </body>
 </html>
