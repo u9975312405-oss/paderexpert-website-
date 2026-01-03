@@ -1,84 +1,77 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import React from "react";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>PADEREXPERT – Kfz-Gutachter Paderborn</title>
-        <meta name="description" content="Unabhängiger Kfz-Gutachter in Paderborn. Kostenlos bei Haftpflichtschäden. Jetzt anrufen: 0155 60037774" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
-      {/* Notfall-Leiste */}
-      <div className="bg-orange-500 text-white text-center py-2 text-sm font-semibold">
-        Unfall gehabt? Jetzt anrufen: <a href="tel:015560037774" className="underline">0155 60037774</a>
+    <main style={{ fontFamily: "Arial, sans-serif", color: "#0b2b5c" }}>
+      {/* Top Bar */}
+      <div style={{ background: "#f97316", color: "#fff", padding: "10px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", fontWeight: "bold" }}>
+        <span>☎ Unfall gehabt? Jetzt anrufen!</span>
+        <a href="tel:015560037774" style={{ color: "#fff", textDecoration: "none" }}>0155 60037774</a>
       </div>
 
       {/* Header */}
-      <header className="bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-          <div className="font-bold text-xl">PADEREXPERT</div>
-          <nav className="space-x-4 text-sm">
-            <Link href="#">Start</Link>
-            <Link href="#">Wann Gutachter?</Link>
-            <Link href="#">Warum?</Link>
-            <Link href="#">Leistungen</Link>
-            <Link href="#">Kontakt</Link>
+      <header style={{ background: "#fff", borderBottom: "1px solid #eee" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "15px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <strong style={{ fontSize: 22 }}>PADEREXPERT</strong>
+          <nav style={{ display: "flex", gap: 20 }}>
+            <a href="#" style={{ color: "#0b2b5c", textDecoration: "none" }}>Start</a>
+            <a href="#" style={{ color: "#0b2b5c", textDecoration: "none" }}>Wann Gutachter?</a>
+            <a href="#" style={{ color: "#0b2b5c", textDecoration: "none" }}>Warum?</a>
+            <a href="#" style={{ color: "#0b2b5c", textDecoration: "none" }}>Leistungen</a>
+            <a href="#" style={{ color: "#0b2b5c", textDecoration: "none" }}>Kontakt</a>
           </nav>
         </div>
       </header>
 
       {/* Hero */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-              Unfall gehabt? <span className="text-orange-500">Wir sind für Sie da.</span>
-            </h1>
-            <p className="text-lg mb-6">
-              Unabhängige Kfz-Gutachten in Paderborn & Umgebung – kostenlos bei Haftpflichtschäden.
-            </p>
-            <div className="flex gap-4">
-              <a href="tel:015560037774" className="bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold">
-                Jetzt anrufen
-              </a>
-              <a href="https://wa.me/4915560037774" className="border border-blue-900 px-6 py-3 rounded-xl font-semibold">
-                WhatsApp
-              </a>
-            </div>
+      <section style={{ position: "relative", minHeight: 520, backgroundImage: "url('/hero-blur.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div style={{ position: "absolute", inset: 0, background: "rgba(11,43,92,0.75)" }} />
+        <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "80px 20px", color: "#fff" }}>
+          <h1 style={{ fontSize: 48, marginBottom: 20 }}>Unfall gehabt?<br /><span style={{ color: "#f97316" }}>Wir sind für Sie da.</span></h1>
+          <p style={{ fontSize: 20, maxWidth: 600 }}>Unabhängige Kfz-Gutachten für Paderborn & Umgebung – kostenlos bei Haftpflichtschäden.</p>
+          <div style={{ display: "flex", gap: 15, marginTop: 30 }}>
+            <a href="tel:015560037774" style={{ background: "#f97316", color: "#fff", padding: "15px 25px", borderRadius: 10, fontWeight: "bold", textDecoration: "none" }}>Jetzt anrufen</a>
+            <a href="https://wa.me/4915560037774" style={{ background: "#fff", color: "#0b2b5c", padding: "15px 25px", borderRadius: 10, fontWeight: "bold", textDecoration: "none" }}>WhatsApp</a>
           </div>
         </div>
       </section>
 
       {/* Vorteile */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-6 text-center">
-          <div>
-            <h3 className="font-bold text-lg mb-2">100 % unabhängig</h3>
-            <p>Wir arbeiten ausschließlich in Ihrem Interesse.</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg mb-2">Kostenfrei</h3>
-            <p>Bei Haftpflichtschäden zahlt die gegnerische Versicherung.</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg mb-2">Schnell vor Ort</h3>
-            <p>Oft noch am selben Tag bei Ihnen.</p>
+      <section style={{ background: "#f9fafb", padding: "60px 20px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <h2 style={{ textAlign: "center", fontSize: 32, marginBottom: 40 }}>Unsere Vorteile</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))", gap: 30 }}>
+            <div style={{ background: "#fff", padding: 25, borderRadius: 12, boxShadow: "0 10px 25px rgba(0,0,0,0.05)" }}>
+              <strong>100 % unabhängig</strong>
+              <p>Wir arbeiten ausschließlich in Ihrem Interesse.</p>
+            </div>
+            <div style={{ background: "#fff", padding: 25, borderRadius: 12, boxShadow: "0 10px 25px rgba(0,0,0,0.05)" }}>
+              <strong>Kostenfrei</strong>
+              <p>Bei Haftpflichtschäden zahlt die gegnerische Versicherung.</p>
+            </div>
+            <div style={{ background: "#fff", padding: 25, borderRadius: 12, boxShadow: "0 10px 25px rgba(0,0,0,0.05)" }}>
+              <strong>Schnell vor Ort</strong>
+              <p>Oft noch am selben Tag bei Ihnen.</p>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* CTA */}
+      <section style={{ background: "#0b2b5c", color: "#fff", padding: "60px 20px", textAlign: "center" }}>
+        <h2 style={{ fontSize: 32, marginBottom: 15 }}>Schnelle Hilfe nach Ihrem Unfall</h2>
+        <p>Rufen Sie uns an – wir kümmern uns um alles!</p>
+        <a href="tel:015560037774" style={{ marginTop: 25, display: "inline-block", background: "#f97316", color: "#fff", padding: "15px 30px", borderRadius: 12, fontWeight: "bold", textDecoration: "none" }}>Jetzt anrufen</a>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-10">
-        <div className="max-w-7xl mx-auto px-6 text-sm">
-          <p>© {new Date().getFullYear()} PADEREXPERT – Kfz-Gutachter Paderborn</p>
-          <div className="mt-2 space-x-4">
-            <Link href="#">Impressum</Link>
-            <Link href="#">Datenschutz</Link>
-          </div>
+      <footer style={{ background: "#fff", padding: "30px 20px", textAlign: "center", fontSize: 14 }}>
+        <div style={{ marginBottom: 10 }}>
+          <a href="#" style={{ marginRight: 15 }}>Impressum</a>
+          <a href="#">Datenschutz</a>
         </div>
+        © 2026 PADEREXPERT – Kfz-Gutachter Paderborn
       </footer>
-    </>
-  )
+    </main>
+  );
 }
