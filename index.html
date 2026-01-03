@@ -1,100 +1,128 @@
-// pages/index.jsx
-// FIXED & CLEAN VERSION – READY FOR VERCEL / NEXT.JS
-// All critical errors removed (Head misuse, broken Image helper, invalid imports)
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PADEREXPERT – Kfz-Gutachter in Paderborn</title>
+  <meta name="description" content="PADEREXPERT – Ihr Kfz-Gutachter in Paderborn. Professionelle Schadensgutachten, Unfallbewertungen und Fahrzeugbewertungen.">
+  <meta name="keywords" content="Kfz-Gutachter, Paderborn, Unfallgutachten, Fahrzeugbewertung, Schadensgutachten">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "PADEREXPERT",
+    "image": "https://yourdomain.com/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Musterstraße 1",
+      "addressLocality": "Paderborn",
+      "postalCode": "33098",
+      "addressCountry": "DE"
+    },
+    "telephone": "+49 123 4567890",
+    "url": "https://yourdomain.com",
+    "sameAs": []
+  }
+  </script>
+  <style>
+    /* RESET */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-family: Arial, sans-serif; }
+    body { line-height: 1.6; color: #222; background: #f9f9f9; }
 
-import Head from "next/head";
-import Image from "next/image";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Menu, X, Phone, MapPin } from "lucide-react";
+    /* HEADER */
+    header { background: #003366; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    header img { height: 50px; }
+    nav a { color: #fff; text-decoration: none; margin-left: 1.5rem; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
 
-export default function Home() {
-  const [open, setOpen] = useState(false);
-  const phone = "+49 1555 60037774";
-  const tel = "tel:+49155560037774";
-  const address = "Therese-Pöhler-Weg 2, 33100 Paderborn";
+    /* HERO */
+    .hero { position: relative; background: url('hero.jpg') center/cover no-repeat; height: 80vh; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; }
+    .hero::after { content: ""; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.4); }
+    .hero-content { position: relative; z-index: 2; max-width: 600px; }
+    .hero-content h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero-content p { font-size: 1.2rem; margin-bottom: 2rem; }
 
-  return (
-    <>
-      <Head>
-        <title>Kfz Gutachter Paderborn | PADEREXPERT</title>
-        <meta name="description" content="PADEREXPERT – Ihr unabhängiger Kfz Gutachter in Paderborn. Unfallgutachten, Fahrzeugbewertung & Gebrauchtwagen-Check. 24h erreichbar." />
-        <meta name="robots" content="index, follow" />
+    .btn { display: inline-block; padding: 0.8rem 1.5rem; background: #ff6600; color: #fff; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+    .btn:hover { background: #e65c00; }
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "AutoRepair",
-          "name": "PADEREXPERT Kfz-Gutachter",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Therese-Pöhler-Weg 2",
-            "addressLocality": "Paderborn",
-            "postalCode": "33100",
-            "addressCountry": "DE"
-          },
-          "telephone": "+49155560037774",
-          "openingHours": "Mo-So 00:00-23:59",
-          "areaServed": "Paderborn und Umgebung",
-          "url": "https://www.gutachter-paderexpert.de"
-        }) }} />
-      </Head>
+    /* SECTIONS */
+    section { padding: 4rem 2rem; max-width: 1200px; margin: auto; }
+    h2 { font-size: 2rem; margin-bottom: 2rem; color: #003366; text-align: center; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 2rem; }
+    .service-card { background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; transition: 0.3s; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 
-      {/* NAV */}
-      <nav className="bg-white shadow sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-6 flex justify-between h-16 items-center">
-          <div className="font-bold text-orange-600">PADEREXPERT</div>
-          <div className="hidden md:flex gap-4">
-            <a href={tel} className="text-orange-600 font-semibold">Jetzt anrufen</a>
-          </div>
-          <button className="md:hidden" onClick={() => setOpen(!open)}>
-            {open ? <X /> : <Menu />}
-          </button>
-        </div>
-      </nav>
+    /* FOOTER */
+    footer { background: #003366; color: #fff; text-align: center; padding: 2rem; }
+    footer a { color: #ff6600; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
-      {/* HERO */}
-      <header className="relative h-[70vh] flex items-center justify-center text-white">
-        <Image src="/images/unfall-auto1.jpg" alt="Unfallschaden" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-center max-w-2xl px-6">
-          <h1 className="text-4xl font-extrabold">Kfz Gutachter Paderborn</h1>
-          <p className="mt-4">Unfallgutachten • Fahrzeugbewertung • Gebrauchtwagen-Check</p>
-          <a href={tel} className="inline-block mt-6 bg-orange-600 px-6 py-3 rounded-lg font-semibold">Jetzt anrufen</a>
-        </div>
-      </header>
+    /* RESPONSIVE */
+    @media(max-width:768px){ .hero-content h1{font-size:2rem;} .hero-content p{font-size:1rem;} }
+  </style>
+</head>
+<body>
 
-      {/* SERVICES */}
-      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8">
-        <div className="bg-white shadow rounded-xl overflow-hidden">
-          <Image src="/images/unfallschaden.jpg" alt="Unfallgutachten" width={400} height={250} className="object-cover" />
-          <div className="p-4"><h2 className="font-bold">Unfallgutachten</h2></div>
-        </div>
-        <div className="bg-white shadow rounded-xl overflow-hidden">
-          <Image src="/images/gebrauchtwagencheck.jpg" alt="Gebrauchtwagen Check" width={400} height={250} className="object-cover" />
-          <div className="p-4"><h2 className="font-bold">Gebrauchtwagen‑Check</h2></div>
-        </div>
-        <div className="bg-white shadow rounded-xl overflow-hidden">
-          <Image src="/images/oldtimer.jpg" alt="Oldtimer Bewertung" width={400} height={250} className="object-cover" />
-          <div className="p-4"><h2 className="font-bold">Fahrzeugbewertung</h2></div>
-        </div>
-      </section>
+<header>
+  <img src="logo.png" alt="PADEREXPERT Logo">
+  <nav>
+    <a href="#services">Leistungen</a>
+    <a href="#about">Über uns</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+</header>
 
-      {/* CONTACT */}
-      <section className="bg-gray-100 py-12">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-2xl font-bold text-orange-600">Kontakt</h2>
-          <p className="mt-2">{address}</p>
-          <a href={tel} className="inline-flex items-center gap-2 mt-4 text-orange-600 font-semibold"><Phone /> {phone}</a>
-          <div className="mt-2">
-            <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} className="inline-flex items-center gap-2 text-sm"><MapPin /> Route öffnen</a>
-          </div>
-        </div>
-      </section>
+<section class="hero">
+  <div class="hero-content">
+    <h1>PADEREXPERT – Ihr Kfz-Gutachter in Paderborn</h1>
+    <p>Professionelle Schadensgutachten, Unfallbewertungen und Fahrzeugbewertungen aus einer Hand.</p>
+    <a href="#contact" class="btn">Jetzt kontaktieren</a>
+  </div>
+</section>
 
-      {/* FOOTER */}
-      <footer className="bg-gray-900 text-gray-300 py-6 text-center text-sm">
-        © {new Date().getFullYear()} PADEREXPERT – Kfz‑Gutachter Paderborn · <a href="/impressum">Impressum</a> · <a href="/datenschutz">Datenschutz</a>
-      </footer>
-    </>
-  );
-}
+<section id="services">
+  <h2>Unsere Leistungen</h2>
+  <div class="services">
+    <div class="service-card">
+      <h3>Unfallgutachten</h3>
+      <p>Präzise Bewertung von Fahrzeugschäden nach Unfällen, anerkannt bei Versicherungen.</p>
+    </div>
+    <div class="service-card">
+      <h3>Fahrzeugbewertung</h3>
+      <p>Transparente Bewertung von Gebrauchtfahrzeugen für Kauf, Verkauf oder Versicherung.</p>
+    </div>
+    <div class="service-card">
+      <h3>Schadensgutachten</h3>
+      <p>Professionelle Begutachtung von Kfz-Schäden zur rechtssicheren Dokumentation.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>Über PADEREXPERT</h2>
+  <p style="max-width:700px; margin:auto; text-align:center;">
+    PADEREXPERT ist Ihr zuverlässiger Kfz-Gutachter in Paderborn. Mit jahrelanger Erfahrung und Fachkompetenz unterstützen wir Sie bei Schadensfällen, Unfallbewertungen und Fahrzeugbewertungen – schnell, transparent und professionell.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Kontakt</h2>
+  <p style="text-align:center; margin-bottom:2rem;">Rufen Sie uns an oder schreiben Sie uns eine Nachricht:</p>
+  <div style="display:flex; justify-content:center; gap:2rem; flex-wrap:wrap;">
+    <div style="background:#fff;padding:2rem;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1); max-width:400px; width:100%;">
+      <p><strong>Telefon:</strong> <a href="tel:+491234567890">+49 123 4567890</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info@paderexpert.de">info@paderexpert.de</a></p>
+      <p><strong>Adresse:</strong> Musterstraße 1, 33098 Paderborn</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 PADEREXPERT | <a href="#contact">Kontakt</a>
+</footer>
+
+</body>
+</html>
