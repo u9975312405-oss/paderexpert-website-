@@ -1,30 +1,197 @@
-<!-<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datenschutz – PADEREXPERT</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kfz Gutachter Paderborn – Unfall- & Schadensgutachten</title>
+<meta name="description" content="Kompetenter Kfz-Sachverständiger in Paderborn. Unfallgutachten, Schadensgutachten & Fahrzeugbewertungen schnell und rechtssicher. Kontaktieren Sie uns direkt via WhatsApp.">
+<meta name="keywords" content="Kfz Gutachter Paderborn, Kfz Sachverständiger Paderborn, Unfallgutachten Paderborn, Schadensgutachten, Fahrzeugbewertung, Oldtimer Gutachten, Auto Wertgutachten, Versicherungsgutachten">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Grundlayout */
+body {margin:0; font-family:'Roboto',sans-serif; background-color:#F5F5F5; color:#333; scroll-behavior:smooth;}
+a {text-decoration:none;}
+h1,h2,h3 {margin:0;}
+section {padding:60px 20px; max-width:1200px; margin:auto;}
+h2 {color:#004C97; margin-bottom:25px; text-align:center; font-size:2em;}
+
+/* Hero */
+header {position:relative; height:80vh; display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; overflow:hidden;}
+header video {position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; opacity:0.25;}
+header .overlay {position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,76,151,0.5); z-index:1;}
+header .content {position:relative; z-index:2;}
+header h1 {font-size:3em; margin-bottom:10px;}
+header p {font-size:1.2em; margin-bottom:25px;}
+header .cta a {background:#FF6F00; color:white; padding:18px 35px; border-radius:50px; font-weight:bold; font-size:1em; transition:0.3s;}
+header .cta a:hover {background:#e65a00;}
+
+/* Services */
+.services {display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
+.service {background:white; flex:1; min-width:250px; padding:35px 25px; border-radius:15px; box-shadow:0 6px 20px rgba(0,0,0,0.1); text-align:center; transition:0.3s; position:relative;}
+.service i {font-size:3em; margin-bottom:15px; display:block;}
+.service:hover {transform:translateY(-7px); box-shadow:0 12px 25px rgba(0,0,0,0.15);}
+.service h3 {color:#004C97; margin-bottom:15px; font-size:1.4em;}
+
+/* Farbige Icons */
+.service i.fa-car-crash {color:#FF6F00;}
+.service i.fa-tools {color:#FF6F00;}
+.service i.fa-car {color:#FF6F00;}
+.service i.fa-comments {color:#FF6F00;}
+
+/* Info / Wissenswertes */
+.info {background:#F0F4F8; padding:60px 20px; border-radius:15px; text-align:center;}
+
+/* Testimonials */
+.testimonials {background:#004C97; color:white; padding:60px 20px; text-align:center;}
+.testimonials p {font-style:italic; max-width:800px; margin:20px auto; font-size:1.1em;}
+
+/* Kontakt */
+.contact {text-align:center;}
+.contact a.cta {background:#FF6F00; color:white; padding:15px 30px; border-radius:50px; font-weight:bold; display:inline-block; margin-top:20px; transition:0.3s;}
+.contact a.cta:hover {background:#e65a00;}
+
+/* Footer */
+footer {background:#333; color:white; text-align:center; padding:50px 20px;}
+footer a {color:#FF6F00; margin:0 10px;}
+
+/* WhatsApp */
+.whatsapp {position:fixed; bottom:20px; right:20px; background:#FF6F00; color:white; padding:15px 22px; border-radius:50px; font-weight:bold; text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); transition:0.3s; z-index:100;}
+.whatsapp:hover {background:#e65a00; transform:scale(1.1);}
+
+/* Cookie Banner */
+#cookie-banner {position:fixed; bottom:0; left:0; width:100%; background:white; color:#333; padding:15px 20px; box-shadow:0 -2px 12px rgba(0,0,0,0.2); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; z-index:9999;}
+#cookie-banner p {margin:0; font-size:0.95em;}
+#cookie-banner button {background:#FF6F00; color:white; border:none; padding:10px 20px; border-radius:50px; cursor:pointer; font-weight:bold; transition:0.3s;}
+#cookie-banner button:hover {background:#e65a00;}
+
+/* Scroll Animation */
+[data-animate]{opacity:0; transform:translateY(20px); transition:all 0.8s ease-out;}
+[data-animate].visible{opacity:1; transform:translateY(0);}
+
+/* Responsive */
+@media(max-width:768px) {
+    .services {flex-direction:column; align-items:center;}
+    header h1 {font-size:2.2em;}
+    header p {font-size:1em;}
+}
+</style>
 </head>
 <body>
+
+<!-- Hero -->
 <header>
-  <a href="index.html">← Zurück zur Startseite</a>
+    <video autoplay muted loop>
+        <source src="https://cdn.pixabay.com/vimeo/555024755/road-driving-4k.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Kfz-Sachverständiger Paderborn</h1>
+        <p>Schnell, zuverlässig und rechtssicher – wir begutachten Ihr Fahrzeug professionell.</p>
+        <div class="cta">
+            <a href="https://wa.me/DEINE_NUMMER" target="_blank">💬 Jetzt per WhatsApp kontaktieren</a>
+        </div>
+    </div>
 </header>
-<main style="padding:2rem; max-width:800px; margin:auto;">
-  <h1>Datenschutzerklärung</h1>
-  <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Personenbezogene Daten werden vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften behandelt.</p>
-  
-  <h2>Erhebung und Speicherung personenbezogener Daten</h2>
-  <p>Beim Besuch unserer Website werden automatisch Informationen wie IP-Adresse, Browsertyp, Datum und Uhrzeit der Anfrage gespeichert. Eine Zusammenführung mit anderen Datenquellen erfolgt nicht.</p>
-  
-  <h2>Kontaktformular / E-Mail</h2>
-  <p>Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen angegebenen Daten ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
-  
-  <h2>Cookies</h2>
-  <p>Unsere Website verwendet keine nicht notwendigen Cookies. Technisch erforderliche Cookies sind nur für den Betrieb der Seite notwendig.</p>
-  
-  <h2>Ihre Rechte</h2>
-  <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung Ihrer personenbezogenen Daten. Bitte kontaktieren Sie uns unter <a href="mailto:info@gutacher-paderexpert.de">info@gutachter-paderexpert.de</a>.</p>
-</main>
+
+<!-- Über uns -->
+<section data-animate>
+    <h2>Über uns</h2>
+    <p>Mit langjähriger Erfahrung in der Automobilbranche – Werkstatt, Handel und Fahrzeugbewertung – bieten wir Ihnen professionelle Kfz-Gutachten. Wir dokumentieren Schäden präzise und erklären alle Schritte verständlich.</p>
+</section>
+
+<!-- Dienstleistungen -->
+<section data-animate>
+    <h2>Unsere Dienstleistungen</h2>
+    <div class="services">
+        <div class="service">
+            <i class="fas fa-car-crash"></i>
+            <h3>Unfallgutachten</h3>
+            <p>Präzise Gutachten nach Autounfällen, anerkannt von Versicherungen. Schnell, transparent und nachvollziehbar.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-tools"></i>
+            <h3>Schadensgutachten</h3>
+            <p>Dokumentation von Fahrzeugschäden für Versicherung oder Privatpersonen – verständlich und rechtssicher.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-car"></i>
+            <h3>Fahrzeugbewertung / Wertgutachten</h3>
+            <p>Gebrauchtwagen, Oldtimer oder Neuwagen – wir bewerten Ihr Auto neutral und fair.</p>
+        </div>
+        <div class="service">
+            <i class="fas fa-comments"></i>
+            <h3>Beratung & Zweitmeinung</h3>
+            <p>Unsicher beim Kauf oder Verkauf? Wir bieten unabhängige Beratung und Zweitmeinungen.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Wissenswertes -->
+<section class="info" data-animate>
+    <h2>Wissenswertes für Kunden</h2>
+    <p>Erfahren Sie alles über den Ablauf eines Gutachtens, Tipps nach einem Unfall und Versicherungsschritte. Nutzen Sie auch unsere FAQ und Blogartikel für nützliche Informationen rund ums Auto.</p>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials" data-animate>
+    <h2>Kundenstimmen</h2>
+    <p>„Sehr schnelle und klare Abwicklung – absolut empfehlenswert!“ – Max M., Paderborn</p>
+    <p>„Kompetent und freundlich, ich fühle mich bestens beraten.“ – Anna S., Paderborn</p>
+</section>
+
+<!-- Kontakt -->
+<section class="contact" data-animate>
+    <h2>Kontakt / Termin</h2>
+    <p>Adresse: Musterstraße 1, 33098 Paderborn</p>
+    <p>Telefon: 01234 567890</p>
+    <p>Öffnungszeiten: Mo–Fr 08:00–18:00</p>
+    <a href="https://wa.me/DEINE_NUMMER" target="_blank" class="cta">💬 Direkt per WhatsApp kontaktieren</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 Kfz-Sachverständiger Paderborn | <a href="#">Impressum</a> | <a href="#">Datenschutz</a> | <a href="#">AGB</a></p>
+</footer>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/DEINE_NUMMER" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner">
+    <p>Wir verwenden Cookies, um Inhalte zu personalisieren und die Website zu verbessern. Mit der Nutzung stimmen Sie unserer <a href="#">Datenschutzerklärung</a> zu.</p>
+    <button id="cookie-accept">Akzeptieren</button>
+</div>
+
+<script>
+// Cookie-Banner
+document.getElementById('cookie-accept').addEventListener('click', function(){
+    document.getElementById('cookie-banner').style.display='none';
+    localStorage.setItem('cookiesAccepted','true');
+});
+window.onload = function(){
+    if(localStorage.getItem('cookiesAccepted')==='true'){
+        document.getElementById('cookie-banner').style.display='none';
+    }
+};
+
+// Scroll Animation
+const animateElements = document.querySelectorAll('[data-animate]');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+},{threshold:0.2});
+animateElements.forEach(el => observer.observe(el));
+</script>
+
 </body>
-</html>- Hier wäre die optimierte datenschutz.html wie zuvor -->
+</html>
