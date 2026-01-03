@@ -1,153 +1,118 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <title>Kfz-Gutachter Paderborn | PADEREXPERT</title>
+import React from 'react';
+import heroImage from './c566cf17-0968-4843-8bb7-d83aeb61bd6b.png'; // Dein hochgeladenes Bild
 
-  <meta name="description" content="PADEREXPERT – Ihr unabhängiger Kfz-Gutachter in Paderborn. Unfallgutachten, Wertgutachten & Schadengutachten. 24h erreichbar." />
-  <meta name="keywords" content="Kfz Gutachter Paderborn, Unfallgutachten, Wertgutachten, Schadengutachten, PADEREXPERT" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c5?auto=format&fit=crop&w=1600&q=80");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #f97316;
-      color: white;
-      padding: 14px 26px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav {
-      background: #111;
-      padding: 10px 20px;
-    }
-
-    nav a {
-      color: white;
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #f97316;
-      margin-bottom: 20px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      border: 1px solid #eee;
-      padding: 20px;
-      border-radius: 8px;
-      background: #fafafa;
-    }
-
-    footer {
-      background: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #f97316;
-      text-decoration: none;
-    }
-  </style>
-</head>
-
-<body>
-
-  <nav>
-    <a href="#leistungen">Leistungen</a>
-    <a href="#ueber">Über uns</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-
-  <header>
-    <h1>Kfz-Gutachter in Paderborn</h1>
-    <p>Unfallgutachten · Wertgutachten · Schadengutachten</p>
-    <a class="btn" href="tel:+49155560037774">📞 Jetzt anrufen</a>
-  </header>
-
-  <section id="leistungen">
-    <h2>Unsere Leistungen</h2>
-    <div class="services">
-      <div class="card">
-        <h3>Unfallgutachten</h3>
-        <p>Professionelle Begutachtung nach Verkehrsunfällen aller Art.</p>
+export default function Home() {
+  return (
+    <React.Fragment>
+      {/* Notfall-Leiste */}
+      <div style={{ backgroundColor: '#FFA500', color: 'white', textAlign: 'center', padding: '10px', fontWeight: 'bold' }}>
+        Unfall gehabt? Jetzt anrufen: <a href="tel:015560037774" style={{ textDecoration: 'underline', color: 'white' }}>0155 60037774</a>
       </div>
-      <div class="card">
-        <h3>Wertgutachten</h3>
-        <p>Marktgerechte Fahrzeugbewertungen – auch für Oldtimer.</p>
-      </div>
-      <div class="card">
-        <h3>Schadengutachten</h3>
-        <p>Präzise Dokumentation für Versicherung & Recht.</p>
-      </div>
-    </div>
-  </section>
 
-  <section id="ueber">
-    <h2>Über PADEREXPERT</h2>
-    <p>
-      PADEREXPERT ist Ihr unabhängiger Kfz-Gutachter in Paderborn und Umgebung.
-      Wir stehen für schnelle Termine, transparente Gutachten und persönliche Beratung.
-    </p>
-  </section>
+      {/* Header */}
+      <header style={{ backgroundColor: '#003366', color: 'white', padding: '20px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '24px' }}>PADEREXPERT</div>
+          <nav style={{ display: 'flex', gap: '15px' }}>
+            <a href="#start" style={{ color: 'white' }}>Start</a>
+            <a href="#wann-gutachter" style={{ color: 'white' }}>Wann Gutachter?</a>
+            <a href="#warum" style={{ color: 'white' }}>Warum?</a>
+            <a href="#leistungen" style={{ color: 'white' }}>Leistungen</a>
+            <a href="#kontakt" style={{ color: 'white' }}>Kontakt</a>
+          </nav>
+        </div>
+      </header>
 
-  <section id="kontakt">
-    <h2>Kontakt</h2>
-    <p><strong>Adresse:</strong> Therese-Pöhler-Weg 2, 33100 Paderborn</p>
-    <p><strong>Telefon:</strong> <a href="tel:+49155560037774">+49 1555 60037774</a></p>
-    <p><strong>Erreichbarkeit:</strong> Rund um die Uhr</p>
-  </section>
+      {/* Hero mit deinem Bild */}
+      <section
+        id="start"
+        style={{
+          position: 'relative',
+          height: '500px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          color: 'white',
+          backgroundImage: `url(${heroImage.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'rgba(0,0,0,0.5)',
+        }} />
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <h1 style={{ fontSize: '48px', fontWeight: 'bold', marginBottom: '20px' }}>
+            Unfall gehabt? <span style={{ color: '#FFA500' }}>Wir sind für Sie da.</span>
+          </h1>
+          <p style={{ fontSize: '20px', marginBottom: '30px' }}>
+            Unabhängige Kfz-Gutachten in Paderborn & Umgebung – kostenlos bei Haftpflichtschäden.
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', flexWrap: 'wrap' }}>
+            <a
+              href="tel:015560037774"
+              style={{
+                backgroundColor: '#FFA500',
+                color: 'white',
+                padding: '15px 30px',
+                borderRadius: '12px',
+                fontWeight: 'bold',
+                textDecoration: 'none',
+                fontSize: '16px',
+              }}
+            >
+              Jetzt anrufen
+            </a>
+            <a
+              href="https://wa.me/4915560037774"
+              style={{
+                border: '2px solid white',
+                color: 'white',
+                padding: '15px 30px',
+                borderRadius: '12px',
+                fontWeight: 'bold',
+                textDecoration: 'none',
+                fontSize: '16px',
+              }}
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
 
-  <footer>
-    © 2026 PADEREXPERT – Kfz-Gutachter Paderborn ·
-    <a href="#">Impressum</a> · <a href="#">Datenschutz</a>
-  </footer>
+      {/* Vorteile ohne Icons */}
+      <section id="warum" style={{ padding: '60px 20px', textAlign: 'center', backgroundColor: 'white' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
+          <div>
+            <h3 style={{ fontWeight: 'bold', fontSize: '22px', marginBottom: '15px' }}>100 % unabhängig</h3>
+            <p>Wir arbeiten ausschließlich in Ihrem Interesse.</p>
+          </div>
+          <div>
+            <h3 style={{ fontWeight: 'bold', fontSize: '22px', marginBottom: '15px' }}>Kostenfrei</h3>
+            <p>Bei Haftpflichtschäden zahlt die gegnerische Versicherung.</p>
+          </div>
+          <div>
+            <h3 style={{ fontWeight: 'bold', fontSize: '22px', marginBottom: '15px' }}>Schnell vor Ort</h3>
+            <p>Oft noch am selben Tag bei Ihnen.</p>
+          </div>
+        </div>
+      </section>
 
-</body>
-</html>
+      {/* Footer */}
+      <footer style={{ backgroundColor: '#003366', color: 'white', padding: '30px 20px', textAlign: 'center' }}>
+        <p>© 2026 PADEREXPERT – Kfz-Gutachter Paderborn</p>
+        <div style={{ marginTop: '15px', display: 'flex', justifyContent: 'center', gap: '20px' }}>
+          <a href="#impressum" style={{ color: 'white', textDecoration: 'underline' }}>Impressum</a>
+          <a href="#datenschutz" style={{ color: 'white', textDecoration: 'underline' }}>Datenschutz</a>
+        </div>
+      </footer>
+    </React.Fragment>
+  );
+}
